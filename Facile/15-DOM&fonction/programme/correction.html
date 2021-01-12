@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <button>Pile ou Face</button>
+    <div>Cliquez sur le bouton</div>
+</body>
+<script>
+    // const divResult = document.querySelector("div");
+    // const myButton = document.querySelector("button");
+    //
+    // myButton.addEventListener("click", function(){
+    //     divResult.innerHTML = pileOuFace();
+    // })
+
+    $("button").on("click", function(){
+        $("div").html(pileOuFace());
+    })
+    
+    function pileOuFace(){
+        var random = Math.floor(Math.random() * 2);
+        // if(random >= 1) return "pile";
+        // else return "face";
+
+        return (random >= 1) ? "face" : "pile";
+    }
+</script>
+</html>
